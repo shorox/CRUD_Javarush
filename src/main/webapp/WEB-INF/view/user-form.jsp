@@ -28,9 +28,9 @@
     </div>
 
     <div id="container">
-        <h3>Save User</h3>
+        <h3>Сохранить пользователя</h3>
 
-        <form:form action="saveUser" modelAttribute="user" method="POST">
+        <form:form action="/user/saveUser" modelAttribute="user" method="POST">
 
             <!-- Need to associate this data with user id -->
             <form:hidden path="id" />
@@ -38,27 +38,27 @@
             <table>
                 <tbody>
                 <tr>
-                    <td><label>Name:</label></td>
+                    <td><label>Имя:</label></td>
                     <td><form:input path="name"></form:input></td>
                 </tr>
 
                 <tr>
-                    <td><label>Age:</label></td>
+                    <td><label>Возраст:</label></td>
                     <td><form:input path="age"></form:input></td>
                 </tr>
 
                 <tr>
-                    <td><label>Is admin:</label></td>
+                    <td><label>Администратор:</label></td>
                     <td>
                         <form:select path="isAdmin">
-                            <form:option value="1">true</form:option>
-                            <form:option value="0">false</form:option>
+                            <form:option value="1">да</form:option>
+                            <form:option value="0">нет</form:option>
                         </form:select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td><label>Created date:</label></td>
+                    <td><label>Дата создания:</label></td>
                     <td>
                         <form:input path="createdDate"></form:input>
                     </td>
@@ -66,7 +66,7 @@
 
                 <tr>
                     <td><label></label></td>
-                    <td><input type="submit" value="Save" class="save" /></td>
+                    <td><input type="submit" value="Сохранить" class="save" /></td>
                 </tr>
                 </tbody>
             </table>
@@ -76,7 +76,7 @@
         <div style="clear: both"></div>
 
         <p>
-            <a href="${pageContext.request.contextPath}/user/list">Back to list</a>
+            <a href="${pageContext.request.contextPath}/user/list">Назад к списку</a>
         </p>
 
     </div>

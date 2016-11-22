@@ -26,27 +26,21 @@
                 <table>
                     <tr>
                         <td>
-                            Filter by name : <input type="text" name="str">
+                            Фильтр по имени : <input type="text" name="str">
                             <input type="submit" value="Search" class="save">
                         </td>
                     </tr>
                 </table>
             </form>
 
-            <!-- Put new button: Add User -->
-            <input type="button" value="Add User"
-                   onclick="window.location.href='showFormAdd'; return false"
-                   class="add-button"
-            />
-
             <!-- Add the table -->
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Is administrator</th>
-                    <th>Created Date</th>
-                    <th>Action</th>
+                    <th>Имя</th>
+                    <th>Возраст</th>
+                    <th>Администратор</th>
+                    <th>Дата создания</th>
+                    <th>Активность</th>
                 </tr>
 
                 <c:forEach var="tempUser" items="${users}">
@@ -67,10 +61,10 @@
                         <td>${tempUser.isAdmin}</td>
                         <td>${tempUser.createdDate}</td>
                         <td>
-                            <a href="${updateLink}">Update</a>
+                            <a href="${updateLink}">Обновить</a>
                             |
                             <a href="${deleteLink}"
-                               onclick="if (!(confirm('Are you sure you want to delete this user!'))) return false">Delete</a>
+                               onclick="if (!(confirm('Удалить пользователя?'))) return false">Удалить</a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -79,7 +73,7 @@
             </br>
 
             <!-- Put new button: Add User -->
-            <input type="button" value="Add User"
+            <input type="button" value="Добавить"
                    onclick="window.location.href='showFormAdd'; return false"
                    class="add-button"
             />
