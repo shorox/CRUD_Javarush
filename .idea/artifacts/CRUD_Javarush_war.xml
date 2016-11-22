@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CRUD_Javarush:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="UserApplication-1.0.war">
+      <element id="artifact" artifact-name="CRUD_Javarush:war exploded" />
+    </root>
+  </artifact>
+</component>
